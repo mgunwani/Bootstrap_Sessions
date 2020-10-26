@@ -1,0 +1,59 @@
+
+* {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;  
+    line-height: 1.7em; 
+}
+
+h1,
+h2 {
+    color: red;
+}
+
+p {
+    color: navy;
+    font-size: 24px;
+    text-align: justify;
+}
+
+/* id selector */
+#para_one {
+    color: coral;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: justify;
+}
+#para_two {
+    color:brown;
+    font-size: 20px;
+    text-align: justify;
+    text-decoration: underline;
+}
+
+/* class selector */
+.para_three {
+    color:darkgoldenrod;
+    font-weight: bold;
+    background-color: pink;
+}
+
+.para_four {
+    color:darkgoldenrod;
+    font-weight: bold;
+    background-color:wheat;
+}
+
+.class_one {
+    color:navy;
+}
+
+.class_two {
+    font-family: cursive;
+}
+
+
+
+
+
+
+
+
