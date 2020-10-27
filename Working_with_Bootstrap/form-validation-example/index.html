@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <title>JavaScript Form validation</title>
     <link rel="stylesheet" href="./mystyle.css" />
-    <script src="./myscript.js"></script>
+
 
 </head>
 
 <body>
-    <form name="contactForm" onsubmit="return validateForm()" method="post">
+    <form name="contactForm" oninput="validateForm()" action="/examples/actions/confirmation.php" method="post">
         <h2>Application Form</h2>
         <div class="row">
             <label>Full Name</label>
@@ -43,6 +43,7 @@
             <div class="form-inline">
                 <label><input type="radio" name="gender" value="male"> Male</label>
                 <label><input type="radio" name="gender" value="female"> Female</label>
+                <label><input type="radio" name="gender" value="other">Other/ Non-Binary</label>
             </div>
             <div class="error" id="genderErr"></div>
         </div>
@@ -55,9 +56,11 @@
             </div>
         </div>
         <div class="row">
-            <input type="submit" value="Submit">
+            <input type="submit" id="submit" disabled value="Submit">
         </div>
     </form>
+    <script src="myscript.js"></script>
+
 </body>
 
 </html>

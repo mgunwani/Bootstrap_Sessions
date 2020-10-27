@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //var name = "Mr. King";
+        // Literal Syntax
+        // Use pattern with forward slashes (/pattern/)
+        // var regex1 = /^Mr\./;
+        // if (regex1.test(name)) {
+        //     document.write('Good')
+        // } else {
+        //     document.write('Bad')
+        // }
+
+        // Constructor Syntax
+        // Use quotes ("pattern")
+        // var regex2 = new RegExp("^Mr\\.");
+        // if (regex2.test(name)) {
+        //     document.write('Very Good')
+        // } else {
+        //     document.write('Very Bad')
+        // }
+
+        /* Global Flag: g to a regular expression to find all matches in a string.  */
+        // var regex = /ca[kf]e/g;
+        // var str = "He was eating cake in the cafe.";
+        // if (regex.test(str)) {
+        //     document.write('Awesome..!!');
+        // } else {
+        //     document.write('Exceptional..!!')
+        // }
+        // var matches = str.match(regex);
+        // document.write(`Found ${matches.length} and matches elements are : ${matches}`)
+
+        // var regex = /\s/g;
+        // var replacement = "-";
+        // var str = "TIT for TAT\nDo\tGood";
+        // // Printing Original String as it is:
+        // document.write("<pre>" + str + "</pre>");
+        // document.write("<pre>" + str.replace(regex, replacement) + "</pre>")
+        // document.write("<pre>" + str.replace(/ /g, "$") + "</pre>")
+
+        // var regex = /[\s,]+/;
+        // var str = "My favourite colors are red, green and blue..";
+        // var parts = str.split(regex);
+        // document.write(parts);
+
+        // var regex = /d$/;
+        // var names = ["John Smith", "James Bond", "Clark Kent"]
+        // for (var name of names) {
+        //     if (regex.test(name)) {
+        //         document.write(`<p>${name}</p>`);
+        //     }
+        // }
+
+        // var str = "Color red is more visible than color blue in daylight.";
+        // var regex1 = /color/g;
+        // var regex2 = /color/gi;
+        // var matches = str.match(regex1);
+        // document.write(`Found ${matches.length} and matches elements are : ${matches}`)
+        // document.write("<br/>");
+        // var matches = str.match(regex2);
+        // document.write(`Found ${matches.length} and matches elements are : ${matches}`)
+
+        var regex = /fox|dog|cat/g;
+        var str = "The quick brown fox jumps over the lazy dog.";
+        var matches = str.match(regex);
+        document.write(`Found ${matches.length} and matches elements are : ${matches}`)
+
+    </script>
+</body>
+
+</html>

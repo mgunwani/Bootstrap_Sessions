@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body onload="checkCookie()">
+    <script>
+        function createCookie(cookieName, cookieValue, daysToExpire) {
+
+            var date = new Date();
+            date.setTime(date.getTime() + (daysToExpire * 24 * 60 * 60 * 1000));
+            document.cookie = `${cookieName}=${cookieValue};expires=${date.toString()}`;
+            alert('Your cookie is saved now..')
+        }
+
+        function accessCookie(cookieName) {
+            var name = cookieName + "=";
+            var all_cookies = document.cookie.split(';');
+            for (var i = 0; i < all_cookies.length; i++) {
+                var ck = all_cookies[i].trim();
+                if (ck.indexOf(name) == 0) {
+                    return ck.substring(name.length, ck.length);
+                }
+            }
+            return "";
+        }
+
+        function checkCookie() {
+            var user = accessCookie("age");
+            if (user != "") {
+                alert("Welcome " + user);
+            } else {
+                var value = prompt("Enter Your age : ");
+                var duration = prompt("How many days you want to store your age on your computer ?");
+                if (value != "" && value != null) {
+                    createCookie("age", value, duration);
+                }
+                // alert("Cookie doesn't exists..")
+            }
+        }
+    </script>
+</body>
+
+</html>

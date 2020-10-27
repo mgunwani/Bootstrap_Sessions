@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        if (localStorage) {
+            $(document).ready(function () {
+                $(".save").click(function () {
+                    var firstName = $("#firstName").val();
+                    localStorage.setItem("first_name", firstName);
+                    alert("Your first name is saved.");
+                });
+                $(".access").click(function () {
+                    alert("Hi, " + localStorage.getItem("first_name"));
+                });
+                $(".remove").click(function () {
+                    localStorage.removeItem("first_name");
+                    alert('Name is removed from local storage.')
+                });
+            });
+        } else {
+            alert("localStorage is empty");
+        }
+    </script>
+</head>
+
+<body>
+    <form>
+        <input type="text" id="firstName">
+        <button type="button" class="save">Store Name (Local Storage)</button>
+        <button type="button" class="access">Get Name (Local Storage)</button>
+        <button type="button" class="remove">Clear Name (Local Storage</button>
+    </form>
+</body>
+
+</html>
